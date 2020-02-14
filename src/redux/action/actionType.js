@@ -1,0 +1,3 @@
+export const ADD_WORD = 'ADD_WORD';
+export const SET_USER_INPUT = 'SET_USER_INPUT';
+export const SET_GENERATED_LETTERS = 'SET_GENERATED_LETTERS';
