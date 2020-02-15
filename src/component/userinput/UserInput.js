@@ -69,7 +69,7 @@ class UserInput extends Component {
     warnError = () => {
         this.setState({error: true});
         setTimeout(() => this.setState({error: false}), 2000)
-    }
+    };
 
 
     validate = (letters) => {

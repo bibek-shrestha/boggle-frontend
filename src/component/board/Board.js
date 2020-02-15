@@ -2,7 +2,7 @@ import React, {Component, Fragment} from 'react';
 import Timer from '../timer/Timer';
 import UserInput from '../userinput/UserInput';
 import Points from '../points/Points';
-import {getGameStatus, getGeneratedLetters, getUserInput} from '../../redux/selector/selectors';
+import {getGameStatus, getGeneratedLetters} from '../../redux/selector/selectors';
 import {connect} from 'react-redux';
 import {setGameStatus, setGeneratedLetters} from '../../redux/action/action';
 import NewGame from '../newgame/Newgame';
@@ -70,10 +70,9 @@ class Board extends Component {
 }
 
 const mapStateToProps = (state) => {
-    const userInput = getUserInput(state);
     const generatedLetters = getGeneratedLetters(state);
     const game = getGameStatus(state);
-    return {userInput, generatedLetters, game};
+    return {generatedLetters, game};
 };
 
 export default connect(mapStateToProps, {setGeneratedLetters, setGameStatus})(Board);
