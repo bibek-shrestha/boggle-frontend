@@ -1,12 +1,17 @@
 import React, {Component} from 'react';
-import Board from './Board';
+import Board from './board/Board';
 
 class App extends Component {
-  render() {
-    return (
-      <Board />
-    );
-  }
+    render() {
+        const dimension = 4;
+        return (
+            <div className="container">
+                <div className="content">
+                    <Board dimension={dimension}/>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;

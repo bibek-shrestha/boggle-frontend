@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { setGameStatus } from '../../redux/action/action';
 
 class Timer extends Component {
     constructor(props) {
@@ -20,6 +22,7 @@ class Timer extends Component {
             if (second === 0) {
                 if (minute === 0) {
                     clearInterval(this.clockInterval);
+                    this.props.setGameStatus(0);
                 } else {
                     this.setState(({minute}) => ({
                         minute: minute - 1,
@@ -40,4 +43,4 @@ class Timer extends Component {
     }
 }
 
-export default Timer;
+export default connect(null, {setGameStatus}) (Timer);
