@@ -15,6 +15,25 @@ class UserInput extends Component {
         };
     }
 
+    render() {
+        return (
+            <Fragment>
+                <div>
+                    <input className="user-input" autoFocus placeholder="Enter your word" type="text"
+                           value={this.state.input}
+                           onChange={(e) => this.updateInput(e.target.value)}/>
+                    {this.state.error ? <div className="user-input error">Invalid Input.</div> : <span></span>}
+                </div>
+                <div className="user-btn-wrapper">
+                    <button className="btn" type="submit" disabled={!this.state.input}
+                            onClick={this.handleSubmit}>Check
+                    </button>
+
+                </div>
+            </Fragment>
+        );
+    }
+
     updateInput = input => {
         this.setState({input});
     };
@@ -24,23 +43,6 @@ class UserInput extends Component {
         this.setState({input: ''});
         this.validateWord(input);
     };
-
-    render() {
-        return (
-            <Fragment>
-                    <div>
-                        <input className="user-input" autoFocus placeholder="Enter your word" type="text"
-                               value={this.state.input}
-                               onChange={(e) => this.updateInput(e.target.value)}/>
-                        {this.state.error ? <div className="user-input error" >Invalid Input.</div> : <span></span>}
-                    </div>
-                    <div className="user-btn-wrapper">
-                        <button className="btn" type="submit" disabled={!this.state.input} onClick={this.handleSubmit}>Check</button>
-
-                    </div>
-            </Fragment>
-        );
-    }
 
     validateWord = (input) => {
         if (this.validate(input)) {

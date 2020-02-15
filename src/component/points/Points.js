@@ -16,7 +16,10 @@ class Points extends Component {
                 </thead>
                 <tbody>
                 {this.populateTable(usedWords)}
-                <tr><th>Total</th><th>{this.getTotalPoints(usedWords)}</th></tr>
+                <tr>
+                    <th>Total</th>
+                    <th>{this.getTotalPoints(usedWords)}</th>
+                </tr>
                 </tbody>
             </table>
         );
@@ -25,7 +28,6 @@ class Points extends Component {
     getTotalPoints = (usedWords) => {
         return usedWords.reduce((accumulator, current) => accumulator + current.points, 0);
     };
-
 
     populateTable = (usedWords) => {
         return usedWords.map((w, index) => <tr key={index}>

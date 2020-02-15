@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { setGameStatus } from '../../redux/action/action';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {setGameStatus} from '../../redux/action/action';
 
 class Timer extends Component {
     constructor(props) {
@@ -37,10 +37,10 @@ class Timer extends Component {
         const {minute, second} = this.state;
         return (
             <div>
-                <h2>0{minute} : { second < 10 ? `0${ second }` : second }</h2>
+                <h2>0{minute} : {second < 10 ? `0${second}` : second}</h2>
             </div>
         );
     }
 }
 
-export default connect(null, {setGameStatus}) (Timer);
+export default connect(null, {setGameStatus})(Timer);

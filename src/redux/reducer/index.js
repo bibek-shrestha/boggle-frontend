@@ -1,7 +1,6 @@
-import { combineReducers } from 'redux';
-import words from './words';
-import userInput from './userInput';
-import letters from './letters';
-import game from './game'
+import {combineReducers} from 'redux';
+import words from './words/words';
+import letters from './letters/letters';
+import game from './game/game'
 
-export default combineReducers({words, userInput, letters, game});
+export default combineReducers({words, letters, game});

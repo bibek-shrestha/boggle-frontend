@@ -1,4 +1,4 @@
-import {ADD_WORD, SET_USER_INPUT, SET_GENERATED_LETTERS, SET_GAME_STATUS, REMOVE_WORDS} from './actionType';
+import {ADD_WORD, REMOVE_WORDS, SET_GAME_STATUS, SET_GENERATED_LETTERS} from './actionType';
 
 export const addWord = (validWord) => ({
     type: ADD_WORD,
@@ -9,13 +9,6 @@ export const addWord = (validWord) => ({
 
 export const removeWords = () => ({
     type: REMOVE_WORDS
-});
-
-export const setUserInput = input => ({
-    type: SET_USER_INPUT,
-    payload: {
-        input
-    }
 });
 
 export const setGeneratedLetters = (letters) => ({

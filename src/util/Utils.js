@@ -7,11 +7,17 @@ export const testValidity = (testValue, letters, visitedNodes, generatedLetters)
             if (testValue) {
                 if (!visitedNodes.some(vn => vn.row === nextValue[k].rPos && vn.col === nextValue[k].cPos) && testRange(testValue.rPos, nextValue[k].rPos)) {
                     if (testRange(testValue.cPos, nextValue[k].cPos)) {
-                        valid = testValidity(nextValue[k], letters.slice(1), [...visitedNodes, { row: nextValue[k].rPos, col: nextValue[k].cPos }], generatedLetters);
+                        valid = testValidity(nextValue[k], letters.slice(1), [...visitedNodes, {
+                            row: nextValue[k].rPos,
+                            col: nextValue[k].cPos
+                        }], generatedLetters);
                     }
                 }
             } else {
-                valid = testValidity(nextValue[k], letters.slice(1), [...visitedNodes, { row: nextValue[k].rPos, col: nextValue[k].cPos }], generatedLetters);
+                valid = testValidity(nextValue[k], letters.slice(1), [...visitedNodes, {
+                    row: nextValue[k].rPos,
+                    col: nextValue[k].cPos
+                }], generatedLetters);
             }
             if (valid) {
                 break;

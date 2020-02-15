@@ -6,9 +6,11 @@ import axios from "axios";
 class NewGame extends Component {
     render() {
         return (
-          <Fragment>
-              <div className="user-btn-wrapper"><button className="btn" onClick={this.startNewGame}>New Game</button></div>
-          </Fragment>
+            <Fragment>
+                <div className="user-btn-wrapper">
+                    <button className="btn" onClick={this.startNewGame}>New Game</button>
+                </div>
+            </Fragment>
         );
     }
 
@@ -22,4 +24,5 @@ class NewGame extends Component {
             });
     }
 }
-export default connect(null, {setGeneratedLetters, setGameStatus, removeWords })(NewGame);
+
+export default connect(null, {setGeneratedLetters, setGameStatus, removeWords})(NewGame);

@@ -1,10 +1,10 @@
-import {ADD_WORD, REMOVE_WORDS} from '../action/actionType';
+import {ADD_WORD, REMOVE_WORDS} from '../../action/actionType';
 
 const initialState = {
     words: []
 };
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
     switch (action.type) {
         case ADD_WORD: {
             const {validWord} = action.payload;

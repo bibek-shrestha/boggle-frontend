@@ -1,5 +1,4 @@
 export const ADD_WORD = 'ADD_WORD';
 export const REMOVE_WORDS = 'REMOVE_WORDS';
-export const SET_USER_INPUT = 'SET_USER_INPUT';
 export const SET_GENERATED_LETTERS = 'SET_GENERATED_LETTERS';
 export const SET_GAME_STATUS = 'SET_GAME_STATUS';
