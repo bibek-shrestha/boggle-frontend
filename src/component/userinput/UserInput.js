@@ -13,6 +13,7 @@ class UserInput extends Component {
             input: '',
             error: false
         };
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     render() {
@@ -34,17 +35,17 @@ class UserInput extends Component {
         );
     }
 
-    updateInput = input => {
+    updateInput(input) {
         this.setState({input});
     };
 
-    handleSubmit = () => {
+    handleSubmit() {
         const input = this.state.input.toUpperCase();
         this.setState({input: ''});
         this.validateWord(input);
     };
 
-    validateWord = (input) => {
+    validateWord(input) {
         if (this.validate(input)) {
             const params = {
                 word: input
@@ -66,13 +67,13 @@ class UserInput extends Component {
         }
     };
 
-    warnError = () => {
+    warnError() {
         this.setState({error: true});
         setTimeout(() => this.setState({error: false}), 2000)
     };
 
 
-    validate = (letters) => {
+    validate(letters) {
         const {generatedLetters, words} = this.props;
         let isValid = false;
         if (letters.length > 2 && letters.length <= 16) {

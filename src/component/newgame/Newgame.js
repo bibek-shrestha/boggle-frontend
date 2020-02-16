@@ -4,17 +4,21 @@ import {setGameStatus, setGeneratedLetters, removeWords} from '../../redux/actio
 import axios from "axios";
 
 class NewGame extends Component {
+    constructor(props) {
+        super(props);
+        this.startNewGame = this.startNewGame.bind(this);
+    }
     render() {
         return (
             <Fragment>
                 <div className="user-btn-wrapper">
-                    <button className="btn" onClick={this.startNewGame}>New Game</button>
+                    <button data-testid="new-game-button" className="btn" onClick={this.startNewGame}>New Game</button>
                 </div>
             </Fragment>
         );
     }
 
-    startNewGame = () => {
+    startNewGame() {
         axios.get('http://localhost:3000/api/v1/generate')
             .then((response) => {
                 const data = response.data.data;

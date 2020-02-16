@@ -22,7 +22,7 @@ class Board extends Component {
         );
     }
 
-    organizeData = () => {
+    organizeData() {
         const {generatedLetters, dimension} = this.props;
         const letters = generatedLetters.letters;
         const data = [];
@@ -32,17 +32,17 @@ class Board extends Component {
         return data;
     };
 
-    populateTable = (data) => {
+    populateTable(data)  {
         return data.map((rowData, index) => <tr key={index}>{this.populateRow(rowData)}</tr>);
     };
 
-    populateRow = (rowData) => {
+    populateRow(rowData) {
         return rowData.map((columnData, index) => <td key={index} className="equalRelative">
             <div className="character-wrapper">{columnData.label}</div>
         </td>);
     };
 
-    getGame = () => {
+    getGame() {
         const {game} = this.props;
         if (game.status === 0) {
             return <NewGame/>;
