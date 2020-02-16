@@ -42,6 +42,7 @@ describe('User Input component test', () => {
            fireEvent.change(queryByTestId('user-input'), {target: {value: 'RCSS'}});
            fireEvent.click(queryByTestId('check-button'));
            expect(axiosMock.get).toHaveBeenCalled();
+           expect(axiosMock.get).toHaveBeenCalledWith('http://localhost:3000/api/v1/validate', {'params': {'word': 'RCSS'}});
        });
 
        it('should trigger and event', () => {
