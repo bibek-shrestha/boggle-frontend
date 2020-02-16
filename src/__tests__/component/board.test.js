@@ -1,15 +1,11 @@
 import React from 'react';
-import {render, cleanup} from '@testing-library/react';
-import configureMockStore from 'redux-mock-store';
-import Board from './Board';
+import {cleanup, render} from '@testing-library/react';
+import Board from '../../component/board/Board';
 import {Provider} from 'react-redux';
-import store from './../../redux/store'
+import store from '../../test-common/test-store';
 
-const mockStore = configureMockStore([]);
 
 describe('Board Test', () => {
-    beforeEach(() => {
-    });
 
     afterEach(() => {
         cleanup();

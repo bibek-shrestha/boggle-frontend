@@ -1,11 +1,10 @@
 import React from 'react';
 import {cleanup, fireEvent, render} from '@testing-library/react';
-import configureMockStore from 'redux-mock-store';
-import NewGame from './Newgame';
-import axiosMock from './../../__mocks__/axios';
-import {mockGeneration} from '../../common/test/constants';
+import NewGame from '../../component/newgame/Newgame';
+import axiosMock from '../../__mocks__/axios';
+import {mockGeneration} from '../../test-common/constants';
+import store from '../../test-common/test-store';
 
-const mockStore = configureMockStore([]);
 
 describe('Button click', () => {
 
@@ -15,12 +14,10 @@ describe('Button click', () => {
     });
 
     it('should render', () => {
-        const store = mockStore('');
         render(<NewGame store={store}/>);
     });
 
     it('should perform button click', () => {
-        const store = mockStore('');
         axiosMock.get.mockResolvedValueOnce({data: { data: mockGeneration.letters, status: 'ok'}});
         const {queryByTestId} = render(<NewGame store={store}/>);
         fireEvent.click(queryByTestId('new-game-button'));

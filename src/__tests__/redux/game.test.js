@@ -1,5 +1,5 @@
-import game from './game';
-import {setGameStatus} from '../../action/action';
+import game from '../../redux/reducer/game/game';
+import {setGameStatus} from '../../redux/action/action';
 
 describe('Reducer for game status', () => {
    it('should change the status of game to 1', () => {

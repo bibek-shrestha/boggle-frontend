@@ -1,20 +1,10 @@
 import React from 'react';
 import {cleanup, fireEvent, render} from '@testing-library/react';
-import configureMockStore from 'redux-mock-store';
-import {mockGeneration, validWord} from '../../common/test/constants';
-import UserInput from './UserInput';
+import UserInput from '../../component/userinput/UserInput.js';
 import axiosMock from '../../__mocks__/axios';
-
-const mockStore = configureMockStore([]);
+import store from '../../test-common/test-store';
 
 describe('User Input component test', () => {
-    let store;
-    beforeEach(() => {
-        store = mockStore({
-            letters: mockGeneration,
-            words: {words: [validWord]}
-        });
-    });
 
     afterEach(() => {
         cleanup();

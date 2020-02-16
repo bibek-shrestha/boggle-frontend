@@ -1,7 +1,7 @@
 import configureMockStore from 'redux-mock-store';
-import words from './words';
-import {addWord, removeWords} from '../../action/action';
-import {validWord} from '../../../common/test/constants';
+import words from '../../redux/reducer/words/words';
+import {addWord, removeWords} from '../../redux/action/action';
+import {validWord} from '../../test-common/constants';
 
 const mockStore = configureMockStore([]);
 
