@@ -20,13 +20,13 @@ class UserInput extends Component {
         return (
             <Fragment>
                 <div>
-                    <input className="user-input" autoFocus placeholder="Enter your word" type="text"
+                    <input data-testid="user-input" className="user-input" autoFocus placeholder="Enter your word" type="text"
                            value={this.state.input}
                            onChange={(e) => this.updateInput(e.target.value)}/>
                     {this.state.error ? <div className="user-input error">Invalid Input.</div> : <span></span>}
                 </div>
                 <div className="user-btn-wrapper">
-                    <button className="btn" type="submit" disabled={!this.state.input}
+                    <button data-testid="check-button" className="btn" type="submit" disabled={!this.state.input}
                             onClick={this.handleSubmit}>Check
                     </button>
 

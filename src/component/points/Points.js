@@ -7,7 +7,7 @@ class Points extends Component {
         const {words} = this.props;
         const usedWords = words.words;
         return (
-            <table className="points-table">
+            <table data-testid="points-table" className="points-table">
                 <thead>
                 <tr>
                     <th>Word</th>

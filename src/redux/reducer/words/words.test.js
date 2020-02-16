@@ -1,11 +1,9 @@
 import configureMockStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
 import words from './words';
 import {addWord, removeWords} from '../../action/action';
 import {validWord} from '../../../common/test/constants';
 
-const middlewares = [thunk];
-const mockStore = configureMockStore(middlewares);
+const mockStore = configureMockStore([]);
 
 describe('Reducer for words', () => {
     it('should set the words in state', function () {

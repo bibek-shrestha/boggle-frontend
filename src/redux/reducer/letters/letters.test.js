@@ -1,11 +1,9 @@
 import {setGeneratedLetters} from '../../action/action';
 import {mockGeneration} from '../../../common/test/constants';
 import letters from './letters';
-import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 
-const middlewares = [thunk];
-const mockStore = configureMockStore(middlewares);
+const mockStore = configureMockStore([]);
 
 describe('Reducers for letters', () => {
     it('should handle set generated letters and set letters to state', () => {

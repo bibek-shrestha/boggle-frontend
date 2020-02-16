@@ -1,10 +1,8 @@
-import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
-import {mockGeneration, validWord} from "../../common/test/constants";
-import {getGeneratedLetters, getWordsState, getGameStatus} from "./selectors";
+import {mockGeneration, validWord} from '../../common/test/constants';
+import {getGameStatus, getGeneratedLetters, getWordsState} from './selectors';
 
-const middlewares = [thunk];
-const mockStore = configureMockStore(middlewares);
+const mockStore = configureMockStore([]);
 
 describe('Tests for selectors', () => {
     describe('Letter selectors', () => {
