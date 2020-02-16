@@ -11,11 +11,11 @@ class Board extends Component {
     render() {
         return (
             <div>
-                <div className='app-layout'>
-                    <div className='box game'>
+                <div className="app-layout">
+                    <div className="box game">
                         {this.getGame()}
                     </div>
-                    <div className='box word-list'><Points/></div>
+                    <div className="box word-list"><Points/></div>
                 </div>
 
             </div>
@@ -32,13 +32,13 @@ class Board extends Component {
         return data;
     };
 
-    populateTable(data)  {
+    populateTable(data) {
         return data.map((rowData, index) => <tr key={index}>{this.populateRow(rowData)}</tr>);
     };
 
     populateRow(rowData) {
         return rowData.map((columnData, index) => <td key={index} className="equalRelative">
-            <div className="character-wrapper">{columnData.label}</div>
+            <div data-testid="board-data" className="character-wrapper">{columnData.label}</div>
         </td>);
     };
 
@@ -50,17 +50,17 @@ class Board extends Component {
             const data = this.organizeData();
             return (
                 <Fragment>
-                    <div className='game-nodes'>
+                    <div className="game-nodes">
                         <Timer/>
                     </div>
-                    <div className='game-nodes'>
+                    <div className="game-nodes">
                         <table className="board-table">
                             <tbody>
                             {this.populateTable(data)}
                             </tbody>
                         </table>
                     </div>
-                    <div className='game-nodes'>
+                    <div className="game-nodes">
                         <UserInput/>
                     </div>
                 </Fragment>
