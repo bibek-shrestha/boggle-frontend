@@ -7,3 +7,6 @@
 > http://localhost:4200 (Back-end server should be running)
 * To run tests
 > yarn test
+
+**Note:**
+*Make sure you run the server first.*
