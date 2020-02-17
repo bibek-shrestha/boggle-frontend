@@ -1,6 +1,6 @@
-import {addWord, removeWords, setGameStatus, setGeneratedLetters} from '../../redux/action/action';
-import {ADD_WORD, REMOVE_WORDS, SET_GAME_STATUS, SET_GENERATED_LETTERS} from '../../redux/action/actionType';
-import {mockGeneration, validWord} from '../../test-common/constants';
+import {addWord, removeWords, setGameStatus, setGeneratedLetters} from '../action';
+import {ADD_WORD, REMOVE_WORDS, SET_GAME_STATUS, SET_GENERATED_LETTERS} from '../actionType';
+import {mockGeneration, validWord} from '../../../test-common/constants';
 
 describe('Action Test', () => {
     it('should return correction add word action', () => {
