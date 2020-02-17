@@ -1,10 +1,10 @@
 import React from 'react';
 import {cleanup, render} from '@testing-library/react';
-import Board from '../../component/board/Board';
+import Board from '../Board';
 import {Provider} from 'react-redux';
-import store from '../../test-common/test-store';
-import {setGameStatus} from '../../redux/action/action';
-import {mockGeneration} from '../../test-common/constants';
+import store from '../../../test-common/test-store';
+import {setGameStatus} from '../../../redux/action/action';
+import {mockGeneration} from '../../../test-common/constants';
 
 describe('Board Test', () => {
 

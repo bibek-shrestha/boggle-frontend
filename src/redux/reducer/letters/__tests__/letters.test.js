@@ -1,7 +1,7 @@
-import {setGeneratedLetters} from '../../redux/action/action';
-import {mockGeneration} from '../../test-common/constants';
-import letters from '../../redux/reducer/letters/letters';
-import store, {initialState} from '../../test-common/test-store';
+import {setGeneratedLetters} from '../../../action/action';
+import {mockGeneration} from '../../../../test-common/constants';
+import letters from '../letters';
+import store, {initialState} from '../../../../test-common/test-store';
 
 describe('Reducers for letters', () => {
     it('should handle set generated letters and set letters to state', () => {

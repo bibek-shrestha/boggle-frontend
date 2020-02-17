@@ -1,6 +1,6 @@
-import {getGameStatus, getGeneratedLetters, getWordsState} from '../../redux/selector/selectors';
-import store from '../../test-common/test-store';
-import {mockGeneration, validWord} from '../../test-common/constants';
+import {getGameStatus, getGeneratedLetters, getWordsState} from '../selectors';
+import store from '../../../test-common/test-store';
+import {mockGeneration, validWord} from '../../../test-common/constants';
 
 
 describe('Tests for selectors', () => {

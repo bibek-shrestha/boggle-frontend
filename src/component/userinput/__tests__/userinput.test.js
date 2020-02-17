@@ -1,8 +1,8 @@
 import React from 'react';
 import {cleanup, fireEvent, render} from '@testing-library/react';
-import UserInput from '../../component/userinput/UserInput.js';
-import axiosMock from '../../__mocks__/axios';
-import store from '../../test-common/test-store';
+import UserInput from '../UserInput.js';
+import axiosMock from '../../../__mocks__/axios';
+import store from '../../../test-common/test-store';
 
 describe('User Input component test', () => {
 

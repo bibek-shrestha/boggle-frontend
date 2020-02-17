@@ -1,9 +1,9 @@
 import React from 'react';
 import {cleanup, fireEvent, render} from '@testing-library/react';
-import NewGame from '../../component/newgame/Newgame';
-import axiosMock from '../../__mocks__/axios';
-import {mockGeneration} from '../../test-common/constants';
-import store from '../../test-common/test-store';
+import NewGame from '../Newgame';
+import axiosMock from '../../../__mocks__/axios';
+import {mockGeneration} from '../../../test-common/constants';
+import store from '../../../test-common/test-store';
 
 
 describe('Button click', () => {

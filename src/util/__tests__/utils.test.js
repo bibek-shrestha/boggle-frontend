@@ -1,5 +1,5 @@
-import {testValidity, testRange} from './Utils';
-import {mockGeneration} from '../test-common/constants';
+import {testValidity, testRange} from '../Utils';
+import {mockGeneration} from '../../test-common/constants';
 
 describe('Utils Test', () => {
     it('should test if the input is valid', () => {

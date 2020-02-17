@@ -1,7 +1,7 @@
 import React from 'react';
 import {cleanup, render} from '@testing-library/react';
-import Timer from '../../component/timer/Timer';
-import store from '../../test-common/test-store';
+import Timer from '../Timer';
+import store from '../../../test-common/test-store';
 
 describe('Timer component test', () => {
 
